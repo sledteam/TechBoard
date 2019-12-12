@@ -9,8 +9,16 @@ html{
 
 li{
   list-style: none;
+}
+
+.header-list li{
   float: left;
   padding: 20px 50px;
+}
+
+.footer{
+  height: 300px;
+  background-color: #f2e58f;
 }
 
 .header-logo{
@@ -21,4 +29,5 @@ li{
 
 .main{
   background-color:#e1f4fc;
+  height: 600px;
 }
