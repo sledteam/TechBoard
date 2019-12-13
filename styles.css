@@ -13,11 +13,7 @@ html, body{
   bottom: 0px;
   right: 0px;
   left: 0px;
-  opacity: 40%;
-}
-
-.header li{
-  opacity: 80% !important;
+  opacity: 60%;
 }
 
 li{
@@ -36,7 +32,6 @@ li{
   float: left;
   font-size: 36px;
   padding: 8px 30px;
-  opacity: 80% !important;
 }
 
 .header-list li{
