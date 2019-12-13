@@ -43,7 +43,6 @@ li{
 .footer{
   height: 120px;
   background-color: #1a6e6b;
-  position: absolute;
   bottom: 0px;
   right: 0px;
   left: 0px;
@@ -64,5 +63,5 @@ li{
 }
 
 .footer-list li{
-  padding: 2px;
+  padding: 4px;
 }
