@@ -43,7 +43,7 @@ li{
   background-color: #1a6e6b;
   width: 100%;
   clear: both;
-  position:fixed;
+  position:static;
   bottom: 0px;
   right: 0px;
   left: 0px;
