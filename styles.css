@@ -37,12 +37,14 @@ li{
   background-color:#e1f4fc;
   height: 800px;
   width: 100%;
+  margin-right: -5px;
 }
 
 .footer{
   height: 150px;
   background-color: #1a6e6b;
   width: 100%;
+  margin-right: -5px;
 }
 
 .footer-logo{
