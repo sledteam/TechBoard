@@ -33,19 +33,13 @@ li{
 .main{
   background-color:#e1f4fc;
   height: 800px;
-  postion: absolute;
-  top: 60px;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
+  width: 100%;
 }
 
 .footer{
   height: 120px;
   background-color: #1a6e6b;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
+  width: 100%
 }
 
 .footer-logo{
@@ -63,5 +57,5 @@ li{
 }
 
 .footer-list li{
-  padding: 4px;
+  padding: 10px;
 }
