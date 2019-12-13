@@ -45,6 +45,7 @@ li{
   background-color: #1a6e6b;
   width: 100%;
   padding-right: -5px;
+  display: block;
 }
 
 .footer-logo{
