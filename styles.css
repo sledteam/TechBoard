@@ -21,7 +21,7 @@ li{
 .header-list li{
   float: left;
   padding: 20px 50px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 
@@ -37,12 +37,14 @@ li{
 
 .footer-logo{
   font-size: 40px;
-  color: #fff;
+  color: #e1ffcc;
   float: left;
+  padding: 10px 20px;
 }
 
 .footer-list{
-  font-size: 15px;
-  color: #fff;
+  font-size: 20px;
+  color: #ccfbff;
   float: right;
+  padding: 10px 5px
 }
