@@ -5,7 +5,7 @@ html{
 .header {
   background-color: #77e6ca;
   height: 60px;
-  position: absolute;
+  position: fixed;
   top: 0px;
   bottom: 0px;
   right: 0px;
@@ -25,7 +25,7 @@ li{
 
 .header-list li{
   float: left;
-  padding: 20px 50px;
+  padding: 10px 50px;
   font-size: 20px;
 }
 
@@ -33,11 +33,19 @@ li{
 .main{
   background-color:#e1f4fc;
   height: 500px;
+  postion:absolute;
+  top:60px;
+  right: 0px;
+  left: 0px;
 }
 
 .footer{
   height: 120px;
   background-color: #1a6e6b;
+  position: static;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
 }
 
 .footer-logo{
