@@ -32,12 +32,12 @@ li{
 
 .main{
   background-color:#e1f4fc;
-  height: 500px;
-  postion:absolute;
-  top:60px;
+  height: 800px;
+  postion: absolute;
+  top: 60px;
   right: 0px;
   left: 0px;
-  bottom:0px;
+  bottom: 0px;
 }
 
 .footer{
