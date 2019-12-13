@@ -34,8 +34,8 @@ li{
 }
 
 .login:hover{
-  background-color: #326da8;
-  opacity: 100% !important;
+  background-color: #326da8; 
+  color: white;
 }
 
 .header-logo{
