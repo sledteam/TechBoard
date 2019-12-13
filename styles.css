@@ -41,6 +41,7 @@ li{
   height: 150px;
   background-color: #1a6e6b;
   width: 100%;
+  clear: both;
 }
 
 .footer-logo{
