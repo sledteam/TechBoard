@@ -5,7 +5,11 @@ html{
 .header {
   background-color: #77e6ca;
   height: 60px;
-  margin: 0px auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
 }
 
 li{
