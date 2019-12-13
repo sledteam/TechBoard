@@ -2,7 +2,6 @@ html, body{
   font-family: "Comfortaa";
   height: 100%;
   width: 100%;
-  margin: 0px 0px 0px 0px;
 }
 
 .header {
@@ -14,6 +13,7 @@ html, body{
   right: 0px;
   left: 0px;
   opacity: 60%;
+  margin: 0px 0px 0px 0px;
 }
 
 li{
@@ -22,13 +22,13 @@ li{
 
 .login{
   font-size:20px;
-  padding:4px 20px;
+  padding:4px 40px;
   float: right;
   color: #fa4f00;
   border-style: solid;
   border-width: 1px;
   border-color: #4260f5;
-  border-radius: 10px;
+  border-radius: 20px;
   
 }
 
