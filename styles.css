@@ -25,7 +25,11 @@ li{
   padding:4px 20px;
   float: right;
   color: #fa4f00;
-  border-style: ;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #4260f5;
+  border-radius: 10px;
+  
 }
 
 
