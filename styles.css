@@ -48,3 +48,7 @@ li{
   float: right;
   padding: 4px 8px;
 }
+
+.footer-list li{
+  padding: 2px;
+}
