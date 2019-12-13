@@ -34,7 +34,7 @@ li{
 }
 
 .login:hover{
-  border-width: 4px;
+  background-color: #326da8;
 }
 
 .header-logo{
