@@ -108,7 +108,7 @@ li{
 
 .footer-list{
   font-size: 20px;
-  color: #ccfbff !important;
+  color: #ccfbff;
   float: right;
   padding: 2px 8px;
   margin-right: 40px;
@@ -122,19 +122,23 @@ li{
 a:link {
   text-decoration: none;
   cursor: pointer;
+  color: #ccfbff;
 }
 
 a:visited {
   text-decoration: none;
   cursor: pointer;
+  color: #ccfbff;
 }
 
 a:hover {
   text-decoration: none;
   cursor: pointer;
+  color: #ccfbff;
 }
 
 a:active {
   text-decoration: none;
   cursor: pointer;
+  color: #ccfbff;
 }
