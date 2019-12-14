@@ -38,7 +38,7 @@ li{
 }
 
 .login:hover{
-  background-color: #326da8; 
+  background-color: #326da8 !important; 
   color: white;
 }
 
