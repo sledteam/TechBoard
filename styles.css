@@ -5,6 +5,28 @@ html, body{
   margin: 0px 0px 0px 0px;
 }
 
+/* Settings of a tag for whole page*/
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 .header {
   background-color: #77e6ca;
   height: 60px;
@@ -122,23 +144,35 @@ li{
 a:link {
   text-decoration: none;
   cursor: pointer;
-  color: #ccfbff;
 }
 
 a:visited {
   text-decoration: none;
   cursor: pointer;
-  color: #ccfbff;
 }
 
 a:hover {
   text-decoration: none;
   cursor: pointer;
-  color: #ccfbff;
 }
 
 a:active {
   text-decoration: none;
   cursor: pointer;
+}
+
+.footer a:link {
+  color: #ccfbff;
+}
+
+.footer a:visited {
+  color: #ccfbff;
+}
+
+.footer a:hover {
+  color: #ccfbff;
+}
+
+.footer a:active {
   color: #ccfbff;
 }
