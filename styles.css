@@ -113,10 +113,14 @@ li{
   margin: 0px 0px 0px 0px;
 }
 
+.mission{
+  position: relative;
+  top: 100px;
+}
+
 .mission h1{
   text-align: center;
   color: black;
-  marin-top: 200px;
   font-size: 40px;
 }
 
