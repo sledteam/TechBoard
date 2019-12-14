@@ -55,10 +55,11 @@ li{
 }
 
 .footer-logo{
-  font-size: 50px;
+  font-size: 60px;
   color: #0E76BC;
   float: left;
   padding: 15px 20px;
+  font-weight: bold;
 }
 
 .footer-list{
