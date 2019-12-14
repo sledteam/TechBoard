@@ -113,6 +113,16 @@ li{
   margin: 0px 0px 0px 0px;
 }
 
+.mission h1{
+  text-align: center;
+  color: black;
+}
+
+.mission h5{
+  text-align: center;
+  color: #24ABE2;
+}
+
 .footer{
   height: 260px;
   background-color: #1a6e6b;
