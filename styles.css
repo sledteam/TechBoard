@@ -117,11 +117,13 @@ li{
   text-align: center;
   color: black;
   marin-top: 100px;
+  font-size: 50px;
 }
 
 .mission h3{
   text-align: center;
   color: #24ABE2;
+  font-size:25px;
 }
 
 .footer{
