@@ -113,13 +113,10 @@ li{
   margin: 0px 0px 0px 0px;
 }
 
-.mission{
-  marin-top: 100px;
-}
-
 .mission h1{
   text-align: center;
   color: black;
+  marin-top: 100px;
 }
 
 .mission h3{
