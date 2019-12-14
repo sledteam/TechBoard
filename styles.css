@@ -54,8 +54,8 @@ li{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  background-color: #24ABE2;
+  min-width: 240px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -70,7 +70,7 @@ li{
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #0a84c2;
 }
 
 /* Show the dropdown menu on hover */
@@ -80,7 +80,7 @@ li{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #24ABE2;
 }
 
 .main{
