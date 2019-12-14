@@ -113,12 +113,16 @@ li{
   margin: 0px 0px 0px 0px;
 }
 
+.mission{
+  marin-top: 100px;
+}
+
 .mission h1{
   text-align: center;
   color: black;
 }
 
-.mission h5{
+.mission h3{
   text-align: center;
   color: #24ABE2;
 }
