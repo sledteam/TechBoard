@@ -37,6 +37,7 @@ a:active {
   left: 0px;
   opacity: 90%;
   margin: 0px 0px 0px 0px;
+  z-index: 2;
 }
 
 .header-logo{
@@ -112,6 +113,7 @@ li{
   height: 800px;
   width: 100%;
   margin: 0px 0px 0px 0px;
+  z-index: 1;
 }
 
 .mission{
