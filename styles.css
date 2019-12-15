@@ -82,7 +82,7 @@ li{
   min-width: 240px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 20;
-  margin-top: 25px;
+  margin-top: 28px;
   height: 210px;
 }
 
@@ -120,6 +120,11 @@ li{
 .mission{
   position: relative;
   top: 100px;
+  opacity: 80px;
+}
+
+.mission:hover{
+  opacity:100%;
 }
 
 .mission h1{
