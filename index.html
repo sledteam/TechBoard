@@ -1,55 +1,373 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
-  <meta chrset="utf-8">
-  <html lang = "en">
-  <meta name="keywords" content="SLED, JCBMS, SLED team, J.C. Booth Middle School, website, official, Student, Education, ischool">
-  <meta name="description" content="JCBMS SLED Team / Our Mission at BMS SLED is improving the Warrior community experience with ingenuity, creativity, and innovation.">
-  <meta name="author" content="JCBMS SLED Team">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
-  <link rel="icon" href="https://raw.githubusercontent.com/spoon-haruki/TechBoard/master/Copy-of-LOGO-Title-Vertical.ico" />
-  <link rel="stylesheet" href="https://spoon-haruki.github.io/TechBoard/styles.css">
-  <title>JCBMS SLED Team / Home</title>
+    <meta charset="utf-8">
+    <title>JustBuild.LOL - Building Simulator</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118283086-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118283086-1');
+    </script>
+    <script>
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Windows Phone
+        if (/windows phone/i.test(userAgent)) {
+            window.location.replace("/mobile");
+        }
+
+        // Android
+        if (/android/i.test(userAgent)) {
+            window.location.replace("https://play.google.com/store/apps/details?id=lol.justbuild");
+        }
+
+        // iOS
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.replace("https://itunes.apple.com/us/app/justbuild-lol/id1403419695");
+        }
+    </script>
+    <link rel='shortcut icon' type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Practice your battle royale skills with the justbuild.lol building training simulator, just build lol!">
+    <meta name="keywords" content="just build lol,simulator,building,practice,train,free,online,battle royale">
+	<link rel="stylesheet" href="style.css?v=2">
+	<script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+	<script type="text/javascript" src="ads.js?v=3"></script>
+	<style>
+	.ad-rectangle-top {
+		top: 50%;
+		right: 0;
+		width: 310px;
+		height: 270px;
+		margin: -263px 0;
+		border-style: solid;
+		border-width: 10px 0px 10px 10px;
+		border-color: rgba(0,0,0,0.01);
+	}
+
+	.ad-rectangle-bottom {
+		top: 50%;
+		right: 0;
+		width: 310px;
+		height: 260px;
+		margin: 7px 0;
+		border-style: solid;
+		border-width: 0px 0px 0px 10px;
+		border-color: rgba(0,0,0,0.01);
+	}
+	
+	.ad-leaderboard-top {
+		top: 0;
+		left: 50%;
+		width: 748px;
+		height: 100px;
+		margin: 0 0 0 -410px;
+		border-style: solid;
+		border-width: 0px 10px 10px 10px;
+		border-color: rgba(0, 0, 0, 0.01);
+	}
+	
+	@media screen and (max-width: 1200px) {
+		.ad-leaderboard-top {
+			display: none !important;
+		}
+	}
+	
+	<!-- .ad	{ -->
+		<!-- background: rgba(0, 0, 0, 0)!important; -->
+		<!-- border-color: rgba(0, 0, 0, 0.0)!important; -->
+	<!-- } -->
+	
+	#adWindow{
+		border: 10px solid #4382f5!important;
+		height: 500px!important;
+	}
+	
+	a[onclick*="showConsentToolSettings"]{
+		right: 0px;
+		left: auto !important;
+	}
+	
+	</style>
+	<!-- AdinPlay Ads -->
+	<script>
+	var aiptag = aiptag || {};
+	aiptag.cmd = aiptag.cmd || [];
+	aiptag.cmd.display = aiptag.cmd.display || [];
+	aiptag.cmd.player = aiptag.cmd.player || [];
+	
+	aiptag.gdprShowConsentTool = true;
+	aiptag.gdprShowConsentToolButton = true;
+	aiptag.gdprConsentToolPosition = "bottom";
+	
+	</script>
+	<script async src="//api.adinplay.com/libs/aiptag/pub/JBL/justbuild.lol/tag.min.js"></script>
 </head>
+
 <body>
-  <div class = "header">
-      <a href="https://spoon-haruki.github.io/TechBoard/"><img src="https://i.ibb.co/QmrgYks/Copy-of-LOGO-Title-Horizontal.png" alt="SLED" class="header-logo" /></a>
-    <div class = "header-link">
-      <ul>
-        <li>About</li>
-        <div class="dropdown">
-          <li class="droplist">Project</li>
-          <div class="dropdown-content">
-           <a href="#">Chromebook Helpdesk</a>
-           <a href="#">Hour of Code</a>
-           <a href="#">#Keep the Color</a>
-           <a href="#">New Student Tour</a>
-           <a href="#">Sub Help</a>
-          </div>
+	
+	
+	<div id="generalModal" class="modal">
+		<div id="generalModalContent" class="modalContent"></div>
+	</div>
+	
+	<div id="adsModal" class="modal">
+		<div id="content" class="modalContent">
+			<div id="adWindow" style="background: #4382f5;" class="centered">
+				<!-- <p style="color: white; font-family: arial; text-align: center; font-weight: bold;">This ad helps us keep JustBuild.LOL free</p> -->
+				<div id="adContainer"></div>
+				<video id="contentElement" hidden></video>
+			</div>
+		</div>
+	</div>
+	
+    <div id="gameContainer"></div>
+    <div id="loader">
+        <img class="logo" src="logo.png">
+        <div class="spinner"></div>
+        <div class="progress">
+            <div class="full"></div>
         </div>
-        <li>Gallery</li>
-        <li>Blog</li>
     </div>
-  </div>
-    
-  <div class="main">
-    <div class="mission">
-      <h1>-Our MIssion-</h1>
-      <h3>Improving the Warrior community experience with ingenuiry, creativity, and innovation.</h3>
+
+    <div class="ad ad-rectangle-top" id="adRectangleTop">
     </div>
-  </div>
-    
-  <div class="footer">
-      <img src="https://i.ibb.co/p4LvvdH/Copy-of-LOGO-White.png" alt="SLED Logo" class="footer-logo" />
-      <div class="footer-list">
-       <ul>
-        <a href="#top"><li>Back to Top</li></a>
-        <a href="https://instagram.com/jcbmssledteam/"><li>Instagram</li></a>
-        <a href="https://www.facebook.com/jcbooth.sled"><li>Facebook</li></a>
-        <a href="mailto: jcbms-sled-team@mail.fcboe.org"><li>jcbms-sled-team@mail.fcboe.org</li></a>
-        <a href="https://www.fcboe.org/jcbms"><li>J.C. Booth Middle School</li></a>
-       </ul>
-      </div>
-  </div>
+    <div class="ad ad-rectangle-bottom" id="adRectangleBottom">
+    </div>
+	<div class="ad ad-leaderboard-top" id="adLeaderboardTop">
+    </div>
+	
+	<script>
+		function createAdInPlayAd(adId, container){
+			var newDiv = document.createElement("div");
+			newDiv.id = adId;
+			newDiv = container.appendChild(newDiv);
+			var newScript = document.createElement("script");
+			newScript.type = 'text/javascript';
+			var inlineScript = document.createTextNode("aiptag.cmd.display.push(function() { aipDisplayTag.display('" + adId + "'); });");
+			newScript.appendChild(inlineScript);
+			newDiv.appendChild(newScript);
+		}
+		
+		function createAdsenseAd(adId, container, adStyle){
+			var asyncScript = document.createElement("script");
+			asyncScript.async = true;
+			asyncScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+			var insClass =  document.createElement("ins");
+			insClass.style = adStyle;
+			insClass.setAttribute("class", "adsbygoogle");
+			insClass.setAttribute("data-ad-client", "ca-pub-9619368648213417");
+			insClass.setAttribute("data-ad-slot", adId);
+			var newScript = document.createElement("script");
+			var inlineScript = document.createTextNode("(adsbygoogle = window.adsbygoogle || []).push({});");
+			newScript.appendChild(inlineScript);
+			
+			container.appendChild(asyncScript);
+			container.appendChild(insClass);
+			container.appendChild(newScript);
+		}
+		
+		function createAdManagerAd(adId, container, adStyle, slotId, refresh, adSizes){
+			// head
+			var asyncScript = document.createElement("script");
+			asyncScript.async = true;
+			asyncScript.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+			var newScript2 = document.createElement("script");
+			var inlineScript2 = document.createTextNode("window.googletag = window.googletag || {cmd: []}; googletag.cmd.push(function() { googletag.defineSlot('" + slotId + "', " + adSizes + ", '" + adId + "').setTargeting('refresh', ['" + refresh + "']).addService(googletag.pubads()); googletag.pubads().enableSingleRequest(); googletag.enableServices(); });");
+			newScript2.appendChild(inlineScript2);
+			
+			var head = document.getElementsByTagName('head')[0];
+			head.appendChild(asyncScript);
+			head.appendChild(newScript2);
+			
+			// body
+			var newDiv = document.createElement("div");
+			newDiv.id = adId;
+			newDiv.style = adStyle;
+			newDiv = container.appendChild(newDiv);
+			var newScript = document.createElement("script");
+			var inlineScript = document.createTextNode("googletag.cmd.push(function() { googletag.display('" + adId + "'); });");
+			newScript.appendChild(inlineScript);
+			newDiv.appendChild(newScript);
+			
+			container.appendChild(newDiv);
+		}
+	
+		var topRectangleAd = document.getElementById("adRectangleTop");
+		var bottomRectangleAd = document.getElementById("adRectangleBottom");
+		var topLeaderboardAd = document.getElementById("adLeaderboardTop");
+		var useRefresh = false;
+		var useAdInPlay = false;
+		var useAdManager = false;
+		var number = Math.random();
+		console.log(number);
+		
+		
+		if(number <= 1){
+			console.log("Showing AdInPlay with refresh");
+			useRefresh = true;
+			useAdInPlay = true;
+			createAdInPlayAd('justbuild-lol_300x250', topRectangleAd);
+			createAdInPlayAd('justbuild-lol_300x250_2', bottomRectangleAd);
+			createAdInPlayAd('justbuild-lol_728x90', topLeaderboardAd);
+		}
+		/*else if(number <= 0.5){
+			console.log("Showing AdManager without refresh");
+			useAdManager = true;
+			createAdManagerAd('div-gpt-ad-1573555628917-0', topRectangleAd, "width:300px;height:250px", "/21834398356/justbuildlolXrectangleTop", "false", "[300, 250]");
+			createAdManagerAd('div-gpt-ad-1573556407345-0', bottomRectangleAd, "width:300px;height:250px", "/21834398356/justbuildlolXrectangleBottom", "false", "[300, 250]");
+			createAdManagerAd('div-gpt-ad-1573556451269-0', topLeaderboardAd, "width:728px;height:90px", "/21834398356/justbuildlolXleaderboardTop", "false", "[728, 90]");
+		}*/
+		else{
+			console.log("Showing AdManager with refresh");
+			useRefresh = true;
+			useAdManager = true;
+			createAdManagerAd('div-gpt-ad-1573555628917-0', topRectangleAd, "width:300px;height:250px", "/21834398356/justbuildlolXrectangleTop", "true", "[300, 250]");
+			createAdManagerAd('div-gpt-ad-1573556407345-0', bottomRectangleAd, "width:300px;height:250px", "/21834398356/justbuildlolXrectangleBottom", "true", "[300, 250]");
+			createAdManagerAd('div-gpt-ad-1573556451269-0', topLeaderboardAd, "width:728px;height:90px", "/21834398356/justbuildlolXleaderboardTop", "true", "[728, 90]");
+		}
+		/*else{
+			console.log("Showing adsense");
+			createAdsenseAd('1098575085', topRectangleAd, "display:inline-block;width:300px;height:250px");
+			createAdsenseAd('6350901768', bottomRectangleAd, "display:inline-block;width:300px;height:250px");
+			createAdsenseAd('8777561036', topLeaderboardAd, "display:inline-block;width:728px;height:90px");
+		}*/
+		
+		/*if(number <= 0.5){
+			console.log("Showing AdInPlay with refresh");
+			useRefresh = true;
+			useAdInPlay = true;
+			createAdInPlayAd('justbuild-lol_300x250', topRectangleAd);
+			createAdInPlayAd('justbuild-lol_300x250_2', bottomRectangleAd);
+			createAdInPlayAd('justbuild-lol_728x90', topLeaderboardAd);
+		}*/
+		/*else if(number <= 0.5){
+			console.log("Showing AdInPlay without refresh");
+			useAdInPlay = true;
+			createAdInPlayAd('justbuild-lol_300x250_3', topRectangleAd);
+			createAdInPlayAd('justbuild-lol_300x250_4', bottomRectangleAd);
+			createAdInPlayAd('justbuild-lol_728x90_2', topLeaderboardAd);
+		}*/
+		/*else{
+			console.log("Showing adsense");
+			createAdsenseAd('1098575085', topRectangleAd, "display:inline-block;width:300px;height:250px");
+			createAdsenseAd('6350901768', bottomRectangleAd, "display:inline-block;width:300px;height:250px");
+			createAdsenseAd('8777561036', topLeaderboardAd, "display:inline-block;width:728px;height:90px");
+		}*/
+	</script>
+	
+    <script src="https://justbuild.nyc3.cdn.digitaloceanspaces.com/justbuild1.21/Build/UnityLoader.js"></script>
+    <!-- <script src="Build/UnityLoader.js"></script> -->
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "https://justbuild.nyc3.cdn.digitaloceanspaces.com/justbuild1.21/Build/WebGL.json", {onProgress: UnityProgress});
+        // var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+
+        function UnityProgress(gameInstance, progress) {
+            if (!gameInstance.Module) {
+                return;
+            }
+            const loader = document.querySelector("#loader");
+            if (!gameInstance.progress) {
+                const progress = document.querySelector("#loader .progress");
+                progress.style.display = "block";
+                gameInstance.progress = progress.querySelector(".full");
+                loader.querySelector(".spinner").style.display = "none";
+            }
+            gameInstance.progress.style.transform = `scaleX(${progress})`;
+            if (progress === 1 && !gameInstance.removeTimeout) {
+                loader.style.display = "none";
+            }
+        }
+
+        document.addEventListener('pointerlockchange', lockChangeAlert, false);
+        document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
+
+        function lockChangeAlert() {
+            if (!document.pointerLockElement)
+                gameInstance.SendMessage("Pause Canvas", "PauseGame");
+        }
+
+		var needRefresh = false;
+
+        function showAds() {
+			if(useAdInPlay || useAdManager)
+				aipAPItag.showConsentToolButton();
+				
+            document.getElementById("adRectangleTop").style.display = "block";
+			document.getElementById("adRectangleBottom").style.display = "block";
+            document.getElementById("adLeaderboardTop").style.display = "block";
+					
+			refresh();
+        }
+
+        function hideAds() {
+			if(useAdInPlay || useAdManager)
+				aipAPItag.hideConsentToolButton();
+				
+            document.getElementById("adRectangleTop").style.display = "none";
+			document.getElementById("adRectangleBottom").style.display = "none";
+            document.getElementById("adLeaderboardTop").style.display = "none";
+        }
+		
+		var refreshTime = new Date();
+		
+		function refresh(){
+		
+			if(!useRefresh || !needRefresh){
+				needRefresh = true;
+				return;
+			}
+			
+		
+			var timeSinceRefresh = new Date() - refreshTime; //in ms
+			if(timeSinceRefresh < 30*1000){
+				console.log("don't refresh, time since last refresh " + timeSinceRefresh / 1000 + " seconds");
+				return;
+			}
+		
+			if(useAdInPlay){
+				aiptag.cmd.display.push(function() {
+					aipDisplayTag.display('justbuild-lol_300x250'); 
+					aipDisplayTag.display('justbuild-lol_300x250_2'); 
+					aipDisplayTag.display('justbuild-lol_728x90'); 
+				});
+			}
+			else if(useAdManager){
+				if(googletag && googletag.pubads) // null when adblock is enabled
+					googletag.pubads().refresh();
+			}
+			
+			refreshTime = new Date();
+			console.log("refresh ads");
+		}
+
+		window.onfocus = function() {
+			refresh();
+		};
+    </script>
+	</script>
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+	
+	<script src="firebase.js"></script>
+	<script src="login.js"></script>
+	<script src="fireStore.js"></script>
+	
+	<script>
+		initializeFireBase();
+		initializeFirestore();
+	</script>
 </body>
+
 </html>
